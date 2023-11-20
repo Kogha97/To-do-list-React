@@ -49,9 +49,7 @@ export default function ToDoList() {
   };
 
   return (
-    <div className = "red">
-
-
+    <div className = "bigContainer" >
       <div className = "newList-container">
         <h1>Add new List</h1>
         <input
@@ -90,9 +88,9 @@ export default function ToDoList() {
           
             {list.todos.map((task, todoIndex) => (
               
-              <li key={todoIndex}>
+              <li key={todoIndex}> <input type="checkbox"></input>
                 {task}{' '}
-                <input type="checkbox"></input>
+              
                 <button
                   onClick={() => handleRemoveTodo(listIndex, todoIndex)}
                   type="button"
@@ -100,6 +98,7 @@ export default function ToDoList() {
                   Remove
                 </button>
                 <button>Edit</button>
+              
               </li>
             ))}
           </ul>

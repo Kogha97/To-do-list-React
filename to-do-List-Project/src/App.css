@@ -71,3 +71,21 @@ input{
   justify-content: center;
   gap: 20px;
 }
+ul{
+  list-style: none;
+
+}
+li{
+  display: flex;
+  align-items: center;
+  margin: 5% auto;
+  gap: 20px
+  
+}
+input[type="checkbox"]{
+float:left;
+
+}
+.buttonRandE{
+  float: right;
+}
