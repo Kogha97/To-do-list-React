@@ -40,3 +40,34 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.flex{
+  display:flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 2px solid white;
+  border-radius: 8px;
+  width: 450px;
+}
+.container-flex{
+  display:flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.newList-container{
+  margin-bottom: 40px;
+}
+input{
+  margin-right: 20px;
+}
+.deleteListButton{
+  margin: 4% 0;
+}
+.h2AndButton{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

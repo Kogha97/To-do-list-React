@@ -49,10 +49,10 @@ export default function ToDoList() {
   };
 
   return (
-    <div >
+    <div className = "red">
 
 
-      <div>
+      <div className = "newList-container">
         <h1>Add new List</h1>
         <input
           type="text"
@@ -61,12 +61,16 @@ export default function ToDoList() {
         />
         <button onClick={handleAddNewList}>Add list</button>
       </div> 
+
+      <div className = "container-flex">
       {lists.map((list, listIndex) => (
-        <div key={listIndex}>
+        <div className ="flex" key={listIndex}>
+          <div className='h2AndButton'>
         <h2 contentEditable="true"> {/*here it makes the titles editable*/}
             {list.title} 
           </h2> 
-          <button onClick={() => handleDeleteList(listIndex)}>X</button>
+          <button className = "deleteListButton" onClick={() => handleDeleteList(listIndex)}>X</button>
+          </div>
           <form >
             <h4>Add ToDo's here: </h4>
             <input
@@ -83,9 +87,12 @@ export default function ToDoList() {
             </button>
           </form>
           <ul>
+          
             {list.todos.map((task, todoIndex) => (
+              
               <li key={todoIndex}>
                 {task}{' '}
+                <input type="checkbox"></input>
                 <button
                   onClick={() => handleRemoveTodo(listIndex, todoIndex)}
                   type="button"
@@ -96,8 +103,11 @@ export default function ToDoList() {
               </li>
             ))}
           </ul>
+          
         </div>
+        
       ))}
+    </div>
     </div>
   );
 }
