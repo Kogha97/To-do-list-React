@@ -1,14 +1,20 @@
 import { useState } from 'react'
-import './App.css'
 import ToDoList from './components/ToDoList'
+import ToggleButton from './components/ToggleButton'
+import './App.css'
+
 
 
 
 function App() {
-return (
+return(
+    <>
     <ToDoList/>
+    <br />
+    <ToggleButton/>
+    </>
 )
-  
+
 }
 
 export default App
