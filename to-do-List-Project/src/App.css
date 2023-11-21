@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 :root{
   --background-color: white;
@@ -23,11 +24,17 @@ color: var(--secondary-text-color)
 .App{
   background-color: var(--background-color);
 }
+.switch-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
+ 
 }
 
 /* Hide default HTML checkbox */
@@ -48,6 +55,7 @@ color: var(--secondary-text-color)
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+
 }
 
 .slider:before {
@@ -106,6 +114,8 @@ input:checked + .slider:before {
 }
 input{
   margin-right: 20px;
+  padding: 10px;
+  font-size: 18px;
 }
 .deleteListButton{
   margin: 4% 0;

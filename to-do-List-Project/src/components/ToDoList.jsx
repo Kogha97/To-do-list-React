@@ -19,8 +19,6 @@ export default function ToDoList() {
     setCreateList('');
   };
 
-
-
   const handleAddTodo = (listIndex) => {
     
     const updatedLists = [...lists];
@@ -32,7 +30,6 @@ export default function ToDoList() {
       setLists(updatedLists);
     }
   };
-
 
   /* The Delete List and delete li from to Do's buttons*/
   /*Different styling for different buttons here I guess, Thanks Rebekka, you are the best! */
