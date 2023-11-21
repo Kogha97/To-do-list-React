@@ -84,3 +84,52 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
+.flex{
+  display:flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 2px solid white;
+  border-radius: 8px;
+  width: 450px;
+}
+.container-flex{
+  display:flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.newList-container{
+  margin-bottom: 40px;
+}
+input{
+  margin-right: 20px;
+}
+.deleteListButton{
+  margin: 4% 0;
+}
+.h2AndButton{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+ul{
+  list-style: none;
+
+}
+li{
+  display: flex;
+  align-items: center;
+  margin: 5% auto;
+  gap: 20px
+  
+}
+input[type="checkbox"]{
+float:left;
+
+}
+.buttonRandE{
+  float: right;
+}
