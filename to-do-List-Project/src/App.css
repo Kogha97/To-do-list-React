@@ -161,7 +161,7 @@ input[type="checkbox"] {
   /* text-align: center; */
   padding: 20px;
   display: flex;
-  /* position: absolute;  */
+  position: relative;
   bottom: 0;
 }
 
@@ -178,6 +178,9 @@ input[type="checkbox"] {
 }
 
 #root {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
   position: relative;
+  width: 100dvw;
 }
