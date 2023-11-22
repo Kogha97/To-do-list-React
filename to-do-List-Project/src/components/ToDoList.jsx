@@ -82,7 +82,7 @@ export default function ToDoList() {
               </h2>
               <button className="deleteListButton" onClick={() => handleDeleteList(listIndex)}>X</button>
             </div>
-            <form>
+            <form onSubmit={(e) => e.preventDefault()}>
               <h4>Add ToDo's here: </h4>
               <input
                 type="text"
