@@ -3,6 +3,7 @@ import ToDoList from './components/ToDoList'
 import ToggleButton from './components/ToggleButton'
 import './App.css'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 
 
@@ -14,6 +15,7 @@ return(
     <ToDoList/>
     <br />
     <ToggleButton/>
+    <Footer/>
     </>
 )
 
