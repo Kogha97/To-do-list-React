@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -8,8 +8,8 @@ const ThemeToggle = () => {
     setIsDarkMode(newMode);
 
     // Update the theme on the entire document body
-    document.body.classList.toggle('dark-mode', newMode);
-    document.body.classList.toggle('light-mode', !newMode)
+    document.body.classList.toggle("dark-mode", newMode);
+    document.body.classList.toggle("light-mode", !newMode);
   };
 
   return (
@@ -18,11 +18,8 @@ const ThemeToggle = () => {
         <input type="checkbox" onChange={toggleTheme} checked={isDarkMode} />
         <span className="slider round"></span>
       </label>
-
     </div>
   );
 };
 
 export default ThemeToggle;
-
-
