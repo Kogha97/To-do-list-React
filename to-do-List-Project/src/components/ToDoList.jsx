@@ -100,47 +100,63 @@ export default function ToDoList() {
                 Add task
               </button>
             </form>
+          
             <ul>
               {list.todos.map((task, todoIndex) => (
-                <li key={todoIndex}>
-                  <input type="checkbox" />
-                  {task.editing ? (
-                    <>
-                      <input
-                        type="text"
-                        value={task.text}
-                        ref={(el) => {
-                          if (!inputRefs.current[listIndex]) {
-                            inputRefs.current[listIndex] = [];
-                          }
-                          inputRefs.current[listIndex][todoIndex] = el;
-                        }}
-                        onChange={(e) => {
-                          const updatedLists = [...lists];
-                          updatedLists[listIndex].todos[todoIndex].text = e.target.value;
-                          setLists(updatedLists);
-                        }}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter') {
-                            handleSaveEdit(listIndex, todoIndex, task.text);
-                          }
-                        }}
-                      />
-                    </>
-                  ) : (
-                    <>
-                      {task.text}{' '}
-                      <button onClick={() => handleRemoveTodo(listIndex, todoIndex)} type="button">
-                        Remove
-                      </button>
-                      <button onClick={() => handleEditTodo(listIndex, todoIndex)} type="button">
-                        Edit
-                      </button>
-                    </>
-                  )}
-                </li>
-              ))}
-            </ul>
+               <li key={todoIndex} >
+
+            <div style={{ textDecoration: task.checked ? 'line-through' : 'none', flex: 1 }}>
+                 <input
+                type="checkbox"
+                 checked={task.checked || false}
+                 onChange={() => {
+                  const updatedLists = [...lists];
+                   updatedLists[listIndex].todos[todoIndex].checked = !task.checked;
+                 setLists(updatedLists);
+                 }}
+                />
+                {task.editing ? (
+                <>
+                <input
+              type="text"
+              value={task.text}
+              ref={(el) => {
+                if (!inputRefs.current[listIndex]) {
+                  inputRefs.current[listIndex] = [];
+                }
+                inputRefs.current[listIndex][todoIndex] = el;
+              }}
+              onChange={(e) => {
+                const updatedLists = [...lists];
+                updatedLists[listIndex].todos[todoIndex].text = e.target.value;
+                setLists(updatedLists);
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  handleSaveEdit(listIndex, todoIndex, task.text);
+                }
+              }}
+            />
+          </>
+        ) : (
+          <>
+            {task.text}
+          </>
+        )}
+      </div>
+      <div>
+        <button onClick={() => handleRemoveTodo(listIndex, todoIndex)} type="button">
+          Remove
+        </button>
+        <button onClick={() => handleEditTodo(listIndex, todoIndex)} type="button">
+          Edit
+        </button>
+      </div>
+    </li>
+  ))}
+</ul>
+
+
           </div>
         ))}
       </div>
