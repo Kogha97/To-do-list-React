@@ -14,7 +14,6 @@ return(
     <Navbar/>
     <ToDoList/>
     <br />
-    <ToggleButton/>
     <Footer/>
     </>
 )

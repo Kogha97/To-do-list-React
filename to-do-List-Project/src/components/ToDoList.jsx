@@ -64,13 +64,14 @@ export default function ToDoList() {
   return (
     <div className="bigContainer">
       <div className="newList-container">
-        <h1>Add new List</h1>
+        <h1 id='add-list-h1'>Add a new list here:</h1>
+        <span id='input-and-add-list'>
         <input
           type="text"
           value={createList}
           onChange={(e) => setCreateList(e.target.value)}
         />
-        <button onClick={handleAddNewList}>Add list</button>
+        <button onClick={handleAddNewList}>Add list</button></span>
       </div>
 
       <div className="container-flex">

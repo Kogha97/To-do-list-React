@@ -37,7 +37,7 @@ export default function Footer() {
 
         <div className="footer-section about">
             <h4>About this App</h4>
-            <p>Streamlining your day with simplicity and efficiency, one task at a time.</p>
+            <p>Streamlining your day with simplicity <br/> and efficiency, one task at a time.</p>
         </div>
 
         <div className="footer-section newsletter">

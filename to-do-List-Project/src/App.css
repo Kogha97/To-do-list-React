@@ -11,6 +11,7 @@
   --secondary-text-color: #ffe000;
   --primary-accent-color: #f1405a;
   --secondary-accent-color: #812432;
+  --third-accent-color: #ff8c0080;
   /* not being used anywhere: --toggle-background: #f1405a; */
   /* not being used anywhere: --toggle-foreground:rgb(117, 117, 0); */
 }
@@ -92,13 +93,23 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+#add-list-h1 {
+  text-align: center;
+  margin: 30px 0 20px 0;
+}
+
+#input-and-add-list {
+  text-align: center;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  border: 2px solid white;
+  border: 2px solid var(--primary-accent-color);
   border-radius: 8px;
   width: 450px;
+  padding: 30px;
 }
 .container-flex {
   display: flex;
@@ -114,6 +125,7 @@ input {
   margin-right: 20px;
   padding: 10px;
   font-size: 18px;
+  border-radius: 10px;
 }
 .deleteListButton {
   margin: 4% 0;
@@ -122,6 +134,7 @@ input {
   display: flex;
   justify-content: center;
   gap: 20px;
+  align-items: center;
 }
 ul {
   list-style: none;
@@ -146,7 +159,7 @@ input[type="checkbox"] {
   align-items: center;
   gap: 20px;
   width: 100%;
-  background-color: #ff8b00;
+  background-color: #ff8c0080;
 }
 
 .nav-items {
@@ -155,11 +168,9 @@ input[type="checkbox"] {
   margin-left: auto;
 }
 
-
-
 .footer {
   margin-top: auto;
-  background-color: #ff8b00;
+  background-color: #ff8c0080;
   /* text-align: center; */
   padding: 20px;
   display: flex;
