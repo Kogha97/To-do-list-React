@@ -146,7 +146,7 @@ export default function ToDoList() {
         )}
       </div>
       <div>
-        <button onClick={() => handleRemoveTodo(listIndex, todoIndex)} type="button">
+        <button onClick={() => handleRemoveTodo(listIndex, todoIndex)} type="button" id='remove-button'>
           Remove
         </button>
         <button onClick={() => handleEditTodo(listIndex, todoIndex)} type="button">
