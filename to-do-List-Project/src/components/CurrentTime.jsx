@@ -16,7 +16,7 @@ export function CurrentTime() {
   }, []);
 
   return (
-    <div>
+    <div style={{fontWeight:"700"}}>
       <p>Time: {currentTime}</p>
     </div>
   );

@@ -1,9 +1,20 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect} from "react";
 
 export default function ToDoList() {
   const [createList, setCreateList] = useState("");
   const [lists, setLists] = useState([]);
   const inputRefs = useRef([]);
+
+  // Load data from localStorage
+  useEffect(() => {
+    const storedLists = JSON.parse(localStorage.getItem("todoLists")) || [];
+    setLists(storedLists);
+  }, []);
+
+  // Save data to localStorage 
+  useEffect(() => {
+    localStorage.setItem("todoLists", JSON.stringify(lists));
+  }, [lists]);
 
   const handleAddNewList = () => {
     if (createList.trim() === "") {
