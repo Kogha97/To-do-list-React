@@ -108,10 +108,11 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  border: 2px solid var(--primary-accent-color);
+  border: 2px solid ;
   border-radius: 8px;
   width: 450px;
   padding: 30px;
+  background-color: rgba(214, 145, 59, 0.311);
 }
 .container-flex {
   display: flex;
